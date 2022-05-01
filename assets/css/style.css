@@ -1,0 +1,582 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(57,51,50);
+}
+
+a {
+  color: rgba(126,191,65);
+}
+
+a:hover {
+  color: rgba(126,191,65);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: rgba(30,18,16);
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: rgba(126,191,65);
+  transition: background 0.2s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 10px 0;
+  background: rgba(30,18,16);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+#header .logo h1 {
+  font-size: 26px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 15px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: rgba(126,191,65);
+  text-decoration: none;
+}
+
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: rgba(30,18,16);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: rgba(30,18,16);
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: rgba(126,191,65);
+  text-decoration: none;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(28, 47, 65, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# main-visual Section
+--------------------------------------------------------------*/
+#main-visual {
+  width: 100%;
+  height: 75vh;
+  background:url("../img/top.jpg") top center;
+  background-size: cover;
+  background-position: center 100%;
+  padding: 0 15px;
+}
+
+#main-visual h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#main-visual h2 {
+  color: #eee;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+#main-visual .btn-get-started {
+  font-size: 64px;
+  transition: 0.5s;
+  color: #fff;
+  height: 60px;
+}
+
+#main-visual .btn-get-started:hover {
+  padding-top: 10px;
+  color: rgba(57,51,50);
+}
+
+@media (min-width: 1024px) {
+  #main-visual {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-visual h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #main-visual h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background: linear-gradient(180deg, #ffffff 0%, #fff 100%);
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  color: rgba(57,51,50);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: rgba(126,191,65);
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# required
+--------------------------------------------------------------*/
+.required .required-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgba(57,51,50);
+  font-family: "Poppins", sans-serif;
+}
+
+.required .required-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(126,191,65);
+  position: relative;
+}
+
+
+.required .required-item h5 {
+  font-size: 16px;
+  background:rgba(122,123,120);
+  color: #fff;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.required .required-item ul {
+  padding-left: 20px;
+}
+
+.required .required-item ul li {
+  padding-bottom: 10px;
+}
+
+.rrequired .required-item:last-child {
+  padding-bottom: 0;
+}
+
+.required .required-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid rgba(121,186,60);
+}
+
+/*--------------------------------------------------------------
+# card and curriculum
+--------------------------------------------------------------*/
+.card{
+  padding: 0px 0px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(122, 123, 50, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+.card .card-subtitle{
+  color:rgba(126, 191, 65,0.7);
+  background: #ffff;
+  padding:8px 5px;
+}
+
+.txt_mark{
+  background: linear-gradient(transparent 60%,rgba(126,191,65,0.3));
+}
+
+.curriculum .icon-box{
+  padding: 20px 15px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(122, 123, 50, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+  margin-top: 10;
+}
+
+.curriculum p{
+  color: rgba(57, 51, 50,0.8);
+}
+
+.curriculum .icon-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: ease-in-out 0.3s;
+  z-index: -1;
+}
+
+.curriculum .icon-box:hover::before {
+  background: rgba(126,191,65);
+  height: 100%;
+  border-radius: 0px;
+}
+
+.curriculum .icon {
+  margin: 0 auto 30px auto;
+  padding-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(126,191,65);
+  transition: all 0.3s ease-in-out;
+}
+
+.curriculum .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
+}
+
+.curriculum .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.curriculum .title a {
+  color: rgba(57,51,50);
+}
+
+.curriculum .description {
+  font-size: 15px;
+  line-height: 24px;
+  color:  rgba(57,51,50);
+}
+
+.curriculum .time{
+  font-size: 15px;
+  margin-top:16;
+  color: rgba(126,191,65);
+}
+
+.curriculum .icon-box:hover .title a, .curriculum .icon-box:hover .description , .curriculum .icon-box:hover .time{
+  color: #ffffff;
+}
+
+.curriculum .icon-box:hover .icon {
+  background: #fff;
+}
+
+.curriculum .icon-box:hover .icon i {
+  color: rgba(126,191,65);
+}
+
+@media (max-width: 768px) {
+  .curriculum .icon-box::before {
+    bottom: 60%;
+  }
+}
+
+.btn-more{
+  padding-top: 1em;
+  color: rgba(57,51,50);
+}
+
+
+
+/*--------------------------------------------------------------
+# professors
+--------------------------------------------------------------*/
+.professors .professors-item {
+  box-sizing: content-box;
+  min-height: 320px;
+}
+
+.professors .professors-item .professors-img {
+  width: 90px;
+  border-radius: 50%;
+  margin: -40px 0 0 40px;
+  position: relative;
+  z-index: 2;
+  border: 6px solid #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.professors .professors-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 45px;
+  color: rgba(57,51,50);
+}
+
+
+.professors .professors-item h4 {
+  font-size: 14px;
+  color: rgba(126, 191, 65);
+  margin: 0 0 0 45px;
+}
+
+.professors .professors-item .quote-icon-left, .professors .professors-item .quote-icon-right {
+  color: rgba(231, 244, 224);
+  font-size: 26px;
+}
+
+.professors .professors-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.professors .professors-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.professors .professors-item p {
+  font-style: italic;
+  margin: 0 15px 0 15px;
+  padding: 20px 20px 60px 20px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 2px 15px rgba(122, 123, 120, 0.2);
+}
+
+.professors .owl-nav, .professors .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.professors .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd !important;
+}
+
+.professors .owl-dot.active {
+  background-color: rgba(126, 191, 65) !important;
+}
+
+@media (max-width: 767px) {
+  .professors {
+    margin: 30px 10px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: rgba(30,18,16);
+  padding: 24px 0;
+  font-size: 14px;
+  box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+#footer .copyright {
+  text-align: center;
+  color:#fff;
+}
+
+#footer .info{
+  text-align: center;
+  margin:0px 10px;
+  color:#fff;
+}
